@@ -8,8 +8,8 @@
   由于最初安装的es1.4没有兼容es-sql，es-sql提供了sql的方式对es中的索引进行检索，所以换到了es2.3.1版本，谁知跳进了广西大石围天坑之中，费了九牛二虎之力才从坑里爬出来。好了不扯了，言归正传。
 ```
 
-**2、Prerequest  
-**
+2、Prerequest  
+
 
 ```
   （1）centos6.8 minimal
@@ -19,15 +19,15 @@
   （3）maven
 ```
 
-**3、下载  
-**
+3、下载  
+
 
 ```
   从官网或者github下载2.3.1版本
 ```
 
-**4、安装  
-**
+4、安装  
+
 
 ```
   解压
@@ -69,13 +69,13 @@
    插入规则：-A INPUT -m state --state NEW -m tcp -p tcp --dport 9200 -j ACCEPT
 ```
 
-**5、启动**
+5、启动
 
 ```
  sh ${ES\_HOME}/bin/elasticsearch   或者  sh ${ES\_HOME}/bin/elasticsearch -d （后台启动）
 ```
 
-**6、插件安装**
+6、插件安装
 
 ```
  （1）head
