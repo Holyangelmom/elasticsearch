@@ -80,27 +80,27 @@
 ```
  （1）head
 
-          联网安装：sh ${ES\_HOME}/bin/plugin install mobz/elasticsearch-head
+          联网安装：sh ${ES_HOME}/bin/plugin install mobz/elasticsearch-head
 
-          本地安装：sh ${ES\_HOME}/bin/plugin install file:/home/panaidan/file/elasticsearch-head.zip
+          本地安装：sh ${ES_HOME}/bin/plugin install file:/home/panaidan/file/elasticsearch-head.zip
 
-           访问：ip:9200/\_plugin/head
+           访问：ip:9200/_plugin/head
 
  （2）sense
 
-          因为sense集成在kibana当中，所以需安装kibana。下载kibana，解压、移动。安装sense：sh ${kibana\_home}/bin/kibana plugin --install elastic/sense。
+          因为sense集成在kibana当中，所以需安装kibana。下载kibana，解压、移动。安装sense：sh ${kibana_home}/bin/kibana plugin --install elastic/sense。
 
           启动kibana，因为kibana不能以后台形式启动，它的日志一直在终端输出，所以这里使用"&"命令将kibana以后台形式运行，并将错误输出重定向标准输出中 :
 
-          sh ${kibana\_home}/bin/kibana -Q -e http://ip:9200 & 2&gt;&1
+          sh ${kibana_home}/bin/kibana -Q -e http://ip:9200 & 2&>&1
 
   （3）ik
 
            到github下载相应源码，解压，进入ik根目录，执行:mvn clean package。
 
-           打包好了之后创建ik目录：mkdir   ${ES\_HOME}/plugins/ik.
+           打包好了之后创建ik目录：mkdir   ${ES_HOME}/plugins/ik.
 
-           拷贝：cp ${ik\_home}target/releases/elasticsearch-analysis-ik-{version}.zip ${ES\_HOME}/plugins/ik。
+           拷贝：cp ${ik_home}target/releases/elasticsearch-analysis-ik-{version}.zip ${ES_HOME}/plugins/ik。
 
            解压：unzip elasticsearch-analysis-ik-{version}.zip。
 ```
